@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_email_or_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="36dp"
+            android:textColorHint="@color/primary">
+
+            <EditText
+                android:id="@+id/et_email_or_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email or Phone"
+                android:textColorHint="@color/primary"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_below="@id/input_email_or_phone"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/primary">
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColorHint="@color/primary"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_below="@id/input_password"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/primary"
+            android:textColor="@color/white_full"
+            android:textAllCaps="false"
+            android:foreground="@drawable/bg_ripple_white"
+            />
+
+        <TextView
+            android:id="@+id/btn_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_forgot_password"
+            android:layout_below="@id/btn_login"
+            android:layout_alignRight="@id/btn_login"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/primary"
+            android:foreground="@drawable/bg_ripple_primary"
+            android:clickable="true"
+            android:padding="8dp"
+            />
+
+        <View
+            android:id="@+id/v_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#AAA"
+            android:layout_below="@id/btn_forget_password"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="36dp"
+            />
+
+        <TextView
+            android:id="@+id/btn_to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_to_register"
+            android:layout_below="@id/v_separator"
+            android:layout_alignRight="@id/btn_login"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/primary"
+            android:foreground="@drawable/bg_ripple_primary"
+            android:clickable="true"
+            android:padding="8dp"
+            />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout >
